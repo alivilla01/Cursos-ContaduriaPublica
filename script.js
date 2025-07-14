@@ -1,6 +1,6 @@
 const malla = [
   {
-    ciclo: "Ciclo I",
+    ciclo: "Primer Semestre",
     cursos: [
       { id: "EG-I", nombre: "Curso Integrado de Humanidades I", creditos: 6, requisitos: [] },
       { id: "EG-", nombre: "Curso de Arte", creditos: 2, requisitos: [] },
@@ -11,7 +11,7 @@ const malla = [
     ]
   },
   {
-    ciclo: "Ciclo II",
+    ciclo: "Segundo Semestre",
     cursos: [
       { id: "EG-II", nombre: "Curso Integrado de Humanidades II", creditos: 6, requisitos: ["EG-I"] },
       { id: "EF-", nombre: "Actividad Deportiva", creditos: 0, requisitos: [] },
@@ -21,28 +21,28 @@ const malla = [
     ]
   },
   {
-    ciclo: "Ciclo III",
+    ciclo: "Tercer Semestre",
     cursos: [
       { id: "PC-0200", nombre: "Contabilidad Básica", creditos: 4, requisitos: ["DN-0101"] },
-      { id: "PC-0240", nombre: "Matemática Financiera", creditos: 3, requisitos: ["MA-1021", "DN-0103"] },
+      { id: "PC-0240", nombre: "Matemática Financiera", creditos: 3, requisitos: ["MA-1021"] },
       { id: "PC-0261", nombre: "Legislación Comercial, Bancaria y Financiera", creditos: 3, requisitos: ["DN-0104"] },
       { id: "XS-0276", nombre: "Estadística General I", creditos: 4, requisitos: ["MA-1021"] },
       { id: "MA-1022", nombre: "Cálculo para Ciencias Económicas II", creditos: 4, requisitos: ["MA-1021"] }
     ]
   },
   {
-    ciclo: "Ciclo IV",
+    ciclo: "Cuarto Semestre",
     cursos: [
       { id: "SR-I", nombre: "Seminario de Realidad Nacional I", creditos: 2, requisitos: ["EG-II"] },
       { id: "PC-0260", nombre: "Legislación Laboral", creditos: 3, requisitos: ["PC-0261"] },
       { id: "PC-0202", nombre: "Contabilidad Intermedia I", creditos: 3, requisitos: ["PC-0200"] },
       { id: "DN-0123", nombre: "Metodología de la Investigación", creditos: 3, requisitos: ["XS-0276"] },
       { id: "XS-0277", nombre: "Estadística General II", creditos: 4, requisitos: ["XS-0276","MA-1022"] },
-      { id: "DN-0340", nombre: "Administración Financiera I", creditos: 3, requisitos: ["PC-0240"] }
+      { id: "DN-0340", nombre: "Administración Financiera I", creditos: 3, requisitos: ["PC-0240", "PC-0200"] }
     ]
   },
     {
-    ciclo: "Ciclo V",
+    ciclo: "Quinto Semestre",
     cursos: [
       { id: "SR-II", nombre: "Seminario de Realidad Nacional II", creditos: 2, requisitos: ["SR-I"] },
       { id: "PC-0304", nombre: "Contabilidad Intermedia II", creditos: 3, requisitos: ["PC-0240","PC-0202"] },
@@ -53,21 +53,21 @@ const malla = [
     ]
   },
   {
-    ciclo: "Ciclo VI",
+    ciclo: "Sexto Semestre",
     cursos: [
       { id: "PC-0305", nombre: "Contabilizaciones Especiales", creditos: 3, requisitos: ["PC-0304"] },
       { id: "PC-0321", nombre: "Auditoría Financiera II", creditos: 3, requisitos: ["PC-0320"] },
-      { id: "PC-0211", nombre: "Muestreo Aplicado a la Auditoría", creditos: 3, requisitos: ["XS-0277","PC-0320"] },
-      { id: "DN-0105", nombre: "Métodos Cuantitativos para la Toma de Decisiones I", creditos: 3, requisitos: ["DN-0340","XS-0277"] },
-      { id: "DN-0320", nombre: "Principios de Mercadeo", creditos: 3, requisitos: ["PC-0200","XS-0276"] },
+      { id: "PC-0211", nombre: "Muestreo Aplicado a la Auditoría", creditos: 3, requisitos: ["XS-0277","PC-0320","PC-0321"] },
+      { id: "DN-0105", nombre: "Métodos Cuantitativos para la Toma de Decisiones I", creditos: 3, requisitos: ["DN-0340","XS-0277","DN-0320","DN-0341"] },
+      { id: "DN-0320", nombre: "Principios de Mercadeo", creditos: 3, requisitos: ["PC-0200","XS-0276","DN-0105"] },
       { id: "PC-0242", nombre: "Entorno, Gestión y Control", creditos: 3, requisitos: ["PC-0241"] }
     ]
   },
   {
-    ciclo: "Ciclo VII",
+    ciclo: "Septimo Semestre",
     cursos: [
-      { id: "PC-0407", nombre: "Contabilidad Avanzada I", creditos: 3, requisitos: ["PC-0305"] },
-      { id: "PC-0204", nombre: "Laboratorio de Contabilidad", creditos: 3, requisitos: ["PC-0305"] },
+      { id: "PC-0407", nombre: "Contabilidad Avanzada I", creditos: 3, requisitos: ["PC-0305","PC-0204"] },
+      { id: "PC-0204", nombre: "Laboratorio de Contabilidad", creditos: 3, requisitos: ["PC-0305","PC-0407"] },
       { id: "PC-0421", nombre: "Auditoría Financiera III", creditos: 3, requisitos: ["PC-0321"] },
       { id: "PC-0462", nombre: "Legislación Tributaria y Aduanera", creditos: 3, requisitos: ["PC-0304","PC-0260"] },
       { id: "PC-0306", nombre: "Sistemas de Costeo Básico", creditos: 3, requisitos: ["PC-0304"] },
@@ -75,35 +75,35 @@ const malla = [
     ]
   },
   {
-    ciclo: "Ciclo VIII",
+    ciclo: "Octavo Semestre",
     cursos: [
       { id: "PC-0409", nombre: "Sistemas de Costeo Gerencial", creditos: 3, requisitos: ["PC-0306"] },
       { id: "PC-0410", nombre: "Contabilidad Avanzada II", creditos: 3, requisitos: ["PC-0407"] },
       { id: "PC-0205", nombre: "Contabilidad Gubernamental", creditos: 3, requisitos: ["PC-0407"] },
       { id: "PC-0531", nombre: "Auditoría Financiera IV", creditos: 3, requisitos: ["PC-0421"] },
-      { id: "DN-0110", nombre: "Métodos Cuantitativos para la Toma de Decisiones II", creditos: 3, requisitos: ["DN-0105"] },
+      { id: "DN-0110", nombre: "Métodos Cuantitativos para la Toma de Decisiones II", creditos: 3, requisitos: ["DN-0105","DN-0442"] },
       { id: "DN-0525", nombre: "Mercadeo de Servicios", creditos: 3, requisitos: ["DN-0320"] }
     ]
   },
   {
-    ciclo: "Ciclo IX",
+    ciclo: "Noveno Semestre",
     cursos: [
-      { id: "PC-0423", nombre: "Auditoría Informática I", creditos: 3, requisitos: ["PC-0531"] },
-      { id: "PC-0424", nombre: "Laboratorio de Auditoría Informática I", creditos: 1, requisitos: ["PC-0531"] },
-      { id: "PC-0425", nombre: "Control Interno y Auditorías Especiales", creditos: 3, requisitos: ["PC-0531"] },
-      { id: "PC-0528", nombre: "Auditoría de Gestión I", creditos: 4, requisitos: ["PC-0531"] },
+      { id: "PC-0423", nombre: "Auditoría Informática I", creditos: 3, requisitos: ["PC-0530","PC-0424"] },
+      { id: "PC-0424", nombre: "Laboratorio de Auditoría Informática I", creditos: 1, requisitos: ["PC-0530"."PC-0423"] },
+      { id: "PC-0425", nombre: "Control Interno y Auditorías Especiales", creditos: 3, requisitos: ["PC-0530"] },
+      { id: "PC-0528", nombre: "Auditoría de Gestión I", creditos: 4, requisitos: ["PC-0421"] },
       { id: "OPT-", nombre: "Optativo", creditos: 3, requisitos: [] },
       { id: "DN-0114", nombre: "Comunicación Intercultural de los Negocios", creditos: 3, requisitos: ["PC-0409"] }
     ]
   },
   {
-    ciclo: "Ciclo X",
+    ciclo: "Decimo Semestre",
     cursos: [
-      { id: "PC-0526", nombre: "Auditoría Informática II", creditos: 3, requisitos: ["PC-0423","PC-0424"] },
-      { id: "PC-0527", nombre: "Laboratorio de Auditoría Informática II", creditos: 1, requisitos: ["PC-0423","PC-0424"] },
+      { id: "PC-0526", nombre: "Auditoría Informática II", creditos: 3, requisitos: ["PC-0423","PC-0424","PC-0527"] },
+      { id: "PC-0527", nombre: "Laboratorio de Auditoría Informática II", creditos: 1, requisitos: ["PC-0423","PC-0424","PC-0526"] },
       { id: "PC-0529", nombre: "Auditoría de Gestión II", creditos: 4, requisitos: ["PC-0528"] },
       { id: "OPT2-", nombre: "Optativo", creditos: 3, requisitos: [] },
-      { id: "DN-0115", nombre: "Taller de Investigación", creditos: 3, requisitos: ["DN-0114"] },
+      { id: "DN-0115", nombre: "Taller de Investigación", creditos: 3, requisitos: ["DN-0113"] },
       { id: "PC-0210", nombre: "Auditoría Interna", creditos: 3, requisitos: ["PC-0425"] }
     ]
   }
