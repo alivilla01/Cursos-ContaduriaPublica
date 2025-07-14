@@ -5,6 +5,7 @@ const malla = [
     cursos: [
       { id: "DN-0101", nombre: "Introducción a la Administración de Negocios", creditos: 3, requisitos: [] },
       { id: "MA-0001", nombre: "Precálculo", creditos: 0, requisitos: [] }
+      { id: "DN-0102", nombre: "Aplicaciones Ofimaticas para la toma de Decisiones", creditos: 3, requisitos: [] }
     ]
   },
   {
