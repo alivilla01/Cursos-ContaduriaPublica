@@ -89,7 +89,7 @@ const malla = [
     ciclo: "Noveno Semestre",
     cursos: [
       { id: "PC-0423", nombre: "Auditoría Informática I", creditos: 3, requisitos: ["PC-0530","PC-0424"] },
-      { id: "PC-0424", nombre: "Laboratorio de Auditoría Informática I", creditos: 1, requisitos: ["PC-0530"."PC-0423"] },
+      { id: "PC-0424", nombre: "Laboratorio de Auditoría Informática I", creditos: 1, requisitos: ["PC-0530","PC-0423"] },
       { id: "PC-0425", nombre: "Control Interno y Auditorías Especiales", creditos: 3, requisitos: ["PC-0530"] },
       { id: "PC-0528", nombre: "Auditoría de Gestión I", creditos: 4, requisitos: ["PC-0421"] },
       { id: "OPT-", nombre: "Optativo", creditos: 3, requisitos: [] },
