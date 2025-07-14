@@ -9,7 +9,7 @@ const malla = [
     ]
   },
   {
-    ciclo: "Ciclo II",
+    ciclo: "Ciclo III",
     cursos: [
       { id: "DN-0104", nombre: "Elementos Fundamentales de Legislación Empresarial", creditos: 3, requisitos: ["DN-0101"] },
       { id: "MA-1021", nombre: "Cálculo para Ciencias Económicas I", creditos: 4, requisitos: ["MA-0001"] }
