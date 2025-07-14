@@ -1,26 +1,29 @@
-// Datos de la malla (simplificado para ejemplo)
 const malla = [
   {
     ciclo: "Ciclo I",
     cursos: [
+      { id: "EG-I", nombre: "Curso Integrado de Humanidades I", creditos: 6, requisitos: [] },
+      { id: "EG-", nombre: "Curso de Arte", creditos: 2, requisitos: [] },
+      { id: "RP-", nombre: "Repertorio", creditos: 3, requisitos: [] },
       { id: "DN-0101", nombre: "Introducción a la Administración de Negocios", creditos: 3, requisitos: [] },
-      { id: "MA-0001", nombre: "Precálculo", creditos: 0, requisitos: [] }
-      { id: "DN-0102", nombre: "Aplicaciones Ofimaticas para la toma de Decisiones", creditos: 3, requisitos: [] }
+      { id: "MA-0001", nombre: "Precálculo", creditos: 0, requisitos: [] },
+      { id: "DN-0102", nombre: "Aplicaciones Ofimáticas para la Toma de Decisiones", creditos: 3, requisitos: [] }
     ]
   },
   {
-    ciclo: "Ciclo III",
+    ciclo: "Ciclo II",
     cursos: [
+      { id: "EG-II", nombre: "Curso Integrado de Humanidades II", creditos: 6, requisitos: ["EG-I"] },
+      { id: "EF-", nombre: "Actividad Deportiva", creditos: 0, requisitos: [] },
       { id: "DN-0104", nombre: "Elementos Fundamentales de Legislación Empresarial", creditos: 3, requisitos: ["DN-0101"] },
+      { id: "DN-0103", nombre: "Administración de Proyectos y Herramientas para el Análisis de Datos", creditos: 3, requisitos: ["DN-0102"] },
       { id: "MA-1021", nombre: "Cálculo para Ciencias Económicas I", creditos: 4, requisitos: ["MA-0001"] }
     ]
   }
 ];
 
-// Estado de cursos aprobados
 const aprobados = new Set();
 
-// Generar HTML
 function generarMalla() {
   const contenedor = document.getElementById("contenedor-ciclos");
   contenedor.innerHTML = "";
@@ -48,9 +51,9 @@ function generarMalla() {
     divCiclo.appendChild(contCursos);
     contenedor.appendChild(divCiclo);
   });
+  actualizarEstado();
 }
 
-// Marcar aprobado
 function marcarAprobado(sigla) {
   const checkbox = document.querySelector(`#${sigla} input[type="checkbox"]`);
   if (checkbox.checked) {
@@ -61,7 +64,6 @@ function marcarAprobado(sigla) {
   actualizarEstado();
 }
 
-// Habilitar/bloquear cursos
 function actualizarEstado() {
   malla.forEach(bloque => {
     bloque.cursos.forEach(curso => {
@@ -79,6 +81,4 @@ function actualizarEstado() {
 
 document.addEventListener("DOMContentLoaded", () => {
   generarMalla();
-  actualizarEstado();
 });
-
