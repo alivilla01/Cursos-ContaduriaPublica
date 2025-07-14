@@ -1,1 +1,54 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fff0f6;
+  margin: 0;
+  padding: 20px;
+  color: #4b0049;
+}
+h1 {
+  text-align: center;
+  color: #b30086;
+}
+.ciclo {
+  margin-bottom: 40px;
+}
+.ciclo h2 {
+  text-align: center;
+  color: #e754a0;
+}
+.cursos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.curso {
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(179, 0, 134, 0.2);
+  padding: 16px;
+  width: 240px;
+  background-color: #ffe6f0;
+  transition: opacity 0.3s, filter 0.3s;
+  position: relative;
+}
+.curso.bloqueado {
+  opacity: 0.4;
+  filter: grayscale(80%);
+  pointer-events: none;
+}
+.curso h3 {
+  margin-top: 0;
+  color: #b30086;
+}
+.curso p {
+  margin: 4px 0;
+  font-size: 0.9em;
+}
+.aprobado {
+  margin-top: 8px;
+}
+input[type="checkbox"] {
+  accent-color: #e754a0;
+  cursor: pointer;
+}
 
