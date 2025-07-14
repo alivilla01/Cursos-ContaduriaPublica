@@ -1,6 +1,6 @@
 const malla = [
   {
-    ciclo: "Primer Semestre",
+    ciclo: "Ciclo I",
     cursos: [
       { id: "EG-I", nombre: "Curso Integrado de Humanidades I", creditos: 6, requisitos: [] },
       { id: "EG-", nombre: "Curso de Arte", creditos: 2, requisitos: [] },
