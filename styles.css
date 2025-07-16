@@ -4,8 +4,6 @@ body {
   margin: 0;
   padding: 0;
   color: #4b0049;
-  background-attachment: fixed;
-  overflow-x: hidden;
 }
 
 header {
@@ -21,60 +19,78 @@ header h1 {
   font-size: 2rem;
 }
 
-header .subtitulo {
-  margin-top: 5px;
+header p {
+  margin: 5px 0 0;
   font-size: 1rem;
   color: #ffe6f0;
 }
 
 main {
   padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#contenedor-ciclos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1400px;
+  margin: auto;
 }
 
 .ciclo {
   background-color: #fff8fb;
   border-radius: 20px;
   padding: 20px;
-  margin: 30px auto;
-  max-width: 1200px;
-  box-shadow: 0 6px 20px rgba(214, 51, 132, 0.2);
+  width: 280px;
+  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .ciclo h2 {
   text-align: center;
   color: #d63384;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #d63384;
+  padding-bottom: 5px;
+  width: 100%;
 }
 
 .cursos {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
 .curso {
-  background: #ffe6f0;
-  border-radius: 16px;
-  padding: 16px;
-  width: 240px;
-  box-shadow: 0 4px 10px rgba(214, 51, 132, 0.3);
+  background: linear-gradient(135deg, #ffd6eb, #ffe0f0);
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 2px 6px rgba(214, 51, 132, 0.2);
   transition: transform 0.3s;
+  position: relative;
 }
 
 .curso:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(214, 51, 132, 0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 12px rgba(214, 51, 132, 0.3);
 }
 
 .curso h3 {
   margin-top: 0;
+  font-size: 1rem;
   color: #b30086;
 }
 
 .curso p {
   margin: 4px 0;
-  font-size: 0.9em;
+  font-size: 0.85em;
 }
 
 .aprobado {
@@ -100,7 +116,8 @@ input[type="checkbox"] {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-top: 30px;
+  margin: 30px auto;
+  flex-wrap: wrap;
 }
 
 .acciones button {
