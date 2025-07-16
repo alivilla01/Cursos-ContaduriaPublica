@@ -171,9 +171,17 @@ function actualizarEstado() {
       } else {
         div.classList.add("bloqueado");
       }
+
+      // ✅ NUEVO: pinta si está aprobado
+      if (aprobados.has(curso.id)) {
+        div.classList.add("aprobado-curso");
+      } else {
+        div.classList.remove("aprobado-curso");
+      }
     })
   );
 }
+
 
 function guardarEstado() {
   localStorage.setItem(STORAGE_KEY, JSON.stringify([...aprobados]));
