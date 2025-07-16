@@ -144,3 +144,14 @@ footer {
   font-size: 0.9rem;
   box-shadow: 0 -4px 10px rgba(214, 51, 132, 0.5);
 }
+.curso.aprobado-curso {
+  background: linear-gradient(135deg, #e6ccff, #f3e6ff);
+  border: 2px solid #b266ff;
+  box-shadow: 0 4px 12px rgba(178, 102, 255, 0.4);
+}
+
+.curso.aprobado-curso h3 {
+  text-decoration: underline;
+  color: #8000cc;
+}
+
