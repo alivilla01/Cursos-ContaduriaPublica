@@ -172,7 +172,7 @@ function actualizarEstado() {
         div.classList.add("bloqueado");
       }
 
-      // ✅ NUEVO: pinta si está aprobado
+      // ✅ Aplica estilo si aprobado
       if (aprobados.has(curso.id)) {
         div.classList.add("aprobado-curso");
       } else {
@@ -181,6 +181,7 @@ function actualizarEstado() {
     })
   );
 }
+
 
 
 function guardarEstado() {
