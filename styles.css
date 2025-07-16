@@ -150,7 +150,5 @@ footer {
 }
 .curso.aprobado-curso h3 {
   text-decoration: line-through;
-  color: #b30086;  /* o el color original de tu encabezado rosa/lila */
 }
-
 
