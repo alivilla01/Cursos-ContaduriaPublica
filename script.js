@@ -45,7 +45,7 @@ const malla = [
       { id: "DN-0340", nombre: "Administración Financiera I", req: ["PC-0240", "PC-0200"] }
     ]
   },
-    {
+  {
     ciclo: "V Semestre",
     cursos: [
       { id: "SR-II", nombre: "Seminario De Realidad Nacional II", req: ["SR-I"] },
@@ -89,7 +89,7 @@ const malla = [
       { id: "PC-0531", nombre: "Auditoría Financiera IV", req: ["PC-0421"] }
     ]
   },
-    {
+  {
     ciclo: "IX Semestre",
     cursos: [
       { id: "DN-0114", nombre: "Comunicación Intercultural De Los Negocios", req: ["PC-0409"] },
@@ -207,5 +207,3 @@ document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("guardar").addEventListener("click", guardarEstado);
   document.getElementById("limpiar").addEventListener("click", limpiarEstado);
 });
-
-
